@@ -45,6 +45,11 @@ int Span::longestSpan() {
     return v[v.size() - 1] - v[0];
 }
 
+//Before modifying _v, the function checks whether inserting all elements would exceed 
+//_maxsize.
+//If _v.size() + number of new elements > _maxsize, an exception is thrown
+//If the exception is thrown, _v remains unchanged.
+
 void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
     if (_v.size() + std::distance(begin, end) > _maxsize)
         throw Span::SpanFullException();
