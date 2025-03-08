@@ -2,7 +2,7 @@ SRCS =	main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = find
+NAME = stack
 CXX = c++
 CXXFLAGS = -g -std=c++98 -Wall -Wextra -Werror -fsanitize=address
 

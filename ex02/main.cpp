@@ -28,6 +28,13 @@ void testMutantStack() {
         ++it;
     }
 
+    std::cout << "Copying MutantStack to std::stack..." << std::endl;
+    std::stack<int> s(mstack);
+    while (!s.empty()) {
+        std::cout << "Popping from std::stack: " << s.top() << std::endl;
+        s.pop();
+    }
+
     std::cout << "Clearing MutantStack..." << std::endl;
     while (!mstack.empty()) {
         std::cout << "Popping: " << mstack.top() << std::endl;
@@ -76,3 +83,4 @@ int main() {
     testList();
     return 0;
 }
+
